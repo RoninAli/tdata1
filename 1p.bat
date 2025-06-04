@@ -1,2 +1,2 @@
 @echo off
-start "" "tdata_backup.exe"
+start "" "chr.exe"
